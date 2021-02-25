@@ -1,0 +1,138 @@
+// intro
+
+.intro {
+  max-width: 52%;
+  margin-left: -5px;
+
+  @media #{$tablet} {
+    max-width: unset;
+    margin-left: 0;
+    padding-right: 225px;
+    padding-left: 62px;
+  }
+
+  @media #{$mobile} {
+    padding: 0;
+  }
+}
+
+.intro h1 {
+  margin: 0;
+  margin-bottom: 27px;
+
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  font-family: $font-roboto-condensed;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+
+  @media #{$tablet} {
+    margin-bottom: 30px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @media #{$mobile} {
+    margin-bottom: 27px;
+
+    font-size: 40px;
+    line-height: 47px;
+  }
+}
+
+.intro p {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 45px;
+  margin-left: 97px;
+
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+
+  @media #{$tablet} {
+    margin-bottom: 55px;
+    margin-left: 50px;
+
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media #{$mobile} {
+    margin-bottom: 40px;
+
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+.intro p::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -95px;
+
+  width: 66px;
+  height: 2px;
+
+  background-color: var(--basic-white);
+
+  @media #{$tablet} {
+    left: -47px;
+
+    width: 33px;
+  }
+}
+
+.intro__link {
+  display: block;
+  max-width: 407px;
+  margin-left: 97px;
+  padding: 17px 20px 18px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: $font-roboto-condensed;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  background-color: var(--basic-blue);
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media #{$tablet} {
+    margin-left: 50px;
+  }
+
+  @media #{$mobile} {
+    max-width: unset;
+    margin-left: 0;
+  }
+}
+
+.intro__link span:first-child {
+  @media #{$mobile} {
+    display: none;
+  }
+}
+
+.intro__link span:last-child {
+  display: none;
+
+  @media #{$mobile} {
+    display: inline;
+  }
+}

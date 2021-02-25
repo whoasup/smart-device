@@ -1,0 +1,13 @@
+.page {
+  font-style: normal;
+  font-family: $font-ptmono;
+  color: var(--basic-dark);
+
+  background-color: var(--basic-white);
+}
+
+.page body {
+  position: relative;
+
+  min-width: $small;
+}

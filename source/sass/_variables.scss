@@ -1,0 +1,27 @@
+:root {
+  // colors
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-blue: #00b2ff;
+  --text-grey: #666666;
+  --text-black: #1b2d37;
+  --logo-grey: #788891;
+  --logo-black: #203c42;
+}
+
+// fonts
+
+$font-ptmono: "PT Mono", "Arial", sans-serif;
+$font-roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
+$font-roboto: "Roboto", "Arial", sans-serif;
+
+// screen width
+
+$small: 320px;
+$medium: 767px;
+$large: 1023px;
+
+// media
+
+$tablet: "only screen and (max-width: #{$large})";
+$mobile: "only screen and (max-width: #{$medium})";

@@ -1,0 +1,9 @@
+@charset "utf-8";
+// global
+@import "normalize";
+@import "global";
+@import "variables";
+@import "fonts";
+// components
+@import "./components/visually-hidden";
+@import "./components/page";

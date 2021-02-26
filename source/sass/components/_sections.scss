@@ -1,0 +1,72 @@
+// sections
+
+.sections {
+  width: 60%;
+
+  @media #{$tablet} {
+    width: unset;
+    margin-right: 10px;
+  }
+
+  @media #{$mobile} {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.sections h3 {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  font-family: $font-roboto-condensed;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  @media #{$mobile} {
+    margin-bottom: 0;
+  }
+}
+
+.sections__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  column-count: 2;
+
+  @media #{$tablet} {
+    column-count: unset;
+  }
+
+  @media #{$mobile} {
+    margin-top: 30px;
+  }
+}
+
+.sections__item {
+  margin-right: 9.2%;
+
+  @media #{$tablet} {
+    margin-right: 0;
+  }
+}
+
+.sections__item a {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+
+  opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

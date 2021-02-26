@@ -1,0 +1,31 @@
+// socials
+
+.socials__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media #{$tablet} {
+    margin-bottom: -15px;
+  }
+}
+
+.socials__item {
+  margin-bottom: 15px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}

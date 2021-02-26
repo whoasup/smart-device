@@ -1,0 +1,88 @@
+// accordion
+
+.accordion {
+  display: flex;
+  width: 70%;
+
+  @media #{$tablet} {
+    width: 100%;
+    padding: 38px 37px 35px 25px;
+  }
+
+  @media #{$mobile} {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.accordion__button {
+  display: none;
+}
+
+.accordion__item {
+  @media #{$mobile} {
+    padding: 28px 15px;
+  }
+}
+
+.js .accordion__button {
+  @media #{$mobile} {
+    position: absolute;
+    top: 28px;
+    right: 17px;
+
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--basic-white);
+    border: none;
+
+    appearance: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+
+      display: block;
+      width: 100%;
+      height: 1px;
+
+      background-color: #c4c4c4;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.js .accordion__button--close::after {
+  @media #{$mobile} {
+    transform: unset;
+  }
+}
+
+.js .accordion__item {
+  @media #{$mobile} {
+    position: relative;
+
+    padding-right: 45px;
+  }
+}
+
+.js .accordion__button + .accordion__content {
+  @media #{$mobile} {
+    display: none;
+  }
+}
+
+.js .accordion__button--close + .accordion__content {
+  @media #{$mobile} {
+    display: block;
+  }
+}

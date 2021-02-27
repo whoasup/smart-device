@@ -1,0 +1,37 @@
+// main
+
+.main {
+  padding: 0 Max(135px, calc(50% - 585px));
+  padding-top: 109px;
+  padding-bottom: 108px;
+
+  background-color: var(--basic-white);
+  background-image: url("../img/about-background.png");
+  background-repeat: no-repeat;
+  background-position: 50% -27px;
+  background-size: contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/about-background@2x.png");
+  }
+
+  @media #{$tablet} {
+    padding: 54px 25px 83px;
+  }
+
+  @media #{$mobile} {
+    padding: 37px 15px 65px;
+  }
+}
+
+.main__advantages {
+  margin-bottom: 106px;
+
+  @media #{$tablet} {
+    margin-bottom: 54px;
+  }
+
+  @media #{$mobile} {
+    margin-bottom: 59px;
+  }
+}

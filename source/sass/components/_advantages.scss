@@ -1,0 +1,39 @@
+// advantages
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: -30px;
+  padding: 0;
+
+  list-style: none;
+
+  justify-items: center;
+
+  @media #{$mobile} {
+    flex-direction: column;
+    margin-bottom: -20px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  width: 48.7%;
+  min-height: 300px;
+  margin-bottom: 30px;
+
+  &:nth-child(2n) {
+    margin-left: auto;
+  }
+
+  @media #{$tablet} {
+    width: 48%;
+    min-height: 232px;
+  }
+
+  @media #{$mobile} {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

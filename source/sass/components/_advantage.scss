@@ -1,0 +1,85 @@
+// advantage
+
+.advantage {
+  display: block;
+  padding: 40px;
+
+  background-color: var(--basic-white);
+  border: 1px solid var(--border-grey);
+  border-left: 3px solid var(--basic-blue);
+  cursor: pointer;
+
+  @media #{$tablet} {
+    padding: 24px 19px 19px 26px;
+
+    border-left-width: 2px;
+  }
+
+  @media #{$mobile} {
+    padding: 24px 12px 20px 26px;
+
+    border-left-width: 2px;
+
+    &--wide {
+      padding-right: 10px;
+    }
+  }
+}
+
+.advantage svg {
+  margin-bottom: 19px;
+
+  fill: var(--basic-blue);
+
+  @media #{$tablet} {
+    margin-bottom: 5px;
+  }
+
+  @media #{$mobile} {
+    margin-bottom: 10px;
+  }
+}
+
+.advantage h3 {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  font-family: $font-roboto-condensed;
+  color: var(--basic-blue);
+
+  @media #{$tablet} {
+    margin-bottom: 10px;
+  }
+
+  @media #{$mobile} {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.advantage p {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--text-grey);
+}
+
+.advantage:hover {
+  background-color: var(--basic-blue);
+
+  --border-grey: var(--basic-blue);
+}
+
+.advantage:hover h3,
+.advantage:hover p {
+  color: var(--basic-white);
+}
+
+.advantage:hover svg {
+  fill: var(--basic-white);
+}

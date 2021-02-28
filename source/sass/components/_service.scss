@@ -1,0 +1,105 @@
+// service
+
+.service {
+  display: grid;
+  width: 100%;
+
+  font-family: $font-roboto-condensed;
+
+  grid-template-areas: "service";
+
+  @media #{$tablet} {
+    position: relative;
+
+    min-height: 256px;
+  }
+}
+
+.service__figure {
+  display: grid;
+  width: 100%;
+  margin: 0;
+
+  grid-area: service;
+  grid-template-areas: "image";
+}
+
+.service picture,
+.service img {
+  grid-area: image;
+}
+
+.service img {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.2;
+
+  object-fit: cover;
+
+  @media #{$tablet} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.service figcaption {
+  max-width: 240px;
+  padding: 50px 44px 63px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  grid-area: image;
+
+  @media #{$tablet} {
+    padding-top: 40px;
+  }
+
+  @media #{$mobile} {
+    padding-top: 23px;
+    padding-left: 35px;
+  }
+}
+
+.service__link {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  grid-area: service;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 2px var(--basic-blue);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.service__button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 63px;
+  height: 63px;
+
+  background-color: var(--basic-blue);
+
+  fill: var(--basic-blue);
+}

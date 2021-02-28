@@ -1,0 +1,83 @@
+// services
+
+.services {
+  padding: 0 Max(135px, calc(50% - 585px));
+  padding-top: 90px;
+  padding-bottom: 127px;
+
+  color: var(--basic-white);
+
+  background-color: var(--special-black);
+
+  @media #{$tablet} {
+    padding: 53px 25px 78px;
+  }
+
+  @media #{$mobile} {
+    padding: 50px 15px 65px 15px;
+  }
+}
+
+.services h2 {
+  margin: 0;
+  margin-bottom: 49px;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  font-family: $font-roboto-condensed;
+
+  @media #{$tablet} {
+    margin-right: 90px;
+
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media #{$mobile} {
+    margin-right: 0;
+    margin-bottom: 40px;
+    margin-left: 10px;
+
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: -46px;
+  padding: 0;
+
+  list-style: none;
+
+  @media #{$tablet} {
+    flex-direction: column;
+  }
+
+  @media #{$mobile} {
+    margin-bottom: -30px;
+  }
+}
+
+.services__item {
+  display: flex;
+  width: 31.6%;
+  margin-bottom: 46px;
+
+  &:nth-child(3n + 2),
+  &:nth-child(3n + 3) {
+    margin-left: auto;
+  }
+
+  @media #{$tablet} {
+    width: 100%;
+  }
+
+  @media #{$mobile} {
+    margin-bottom: 30px;
+  }
+}

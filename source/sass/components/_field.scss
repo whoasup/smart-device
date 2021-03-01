@@ -44,3 +44,12 @@
     max-height: 104px;
   }
 }
+
+.field--popup input,
+.field--popup textarea {
+  padding: 14px 24px 16px;
+}
+
+.field--popup textarea {
+  max-height: 104px;
+}

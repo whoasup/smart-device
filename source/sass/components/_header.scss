@@ -8,28 +8,51 @@
   color: var(--basic-white);
 
   background-color: var(--special-black);
-  background-image: url("../img/main-background.png"), url("../img/pcb.png");
+  background-image: url("../img/main-background.png"),
+    url("../img/pcb.png"),
+    url("../img/bg-triangle-header.svg"),
+    url("../img/bg-small-triangle-header.svg");
   background-repeat: no-repeat;
-  background-position: 50% 50%, top 257px left 85%;
-  background-size: cover, 36.7% auto;
+  background-position: 50% 50%,
+    top 257px left Max(800px, 86%),
+    top 120px left Max(700px, 83%),
+    top 380px left Max(700px, 66.6%);
+  background-size: cover,
+    705px auto,
+    636px auto,
+    373px auto;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/main-background@2x.png"),
-    url("../img/pcb@2x.png");
+      url("../img/pcb@2x.png"),
+      url("../img/bg-triangle-header.svg"),
+      url("../img/bg-small-triangle-header.svg");
   }
 
   @media #{$tablet} {
     padding: 20px 25px 163px;
 
-    background-position: 50% 50%, top 117px right -200px;
-    background-size: cover, 59.7% auto;
+    background-position: 50% 50%,
+      top 117px right -200px,
+      top -42px right -200px,
+      top 168px right 36px;
+    background-size: cover,
+      59.7% auto,
+      505px auto,
+      294px auto;
   }
 
   @media #{$mobile} {
     padding: 15px 15px 70px;
 
-    background-position: 50% 50%, 140% 22%;
-    background-size: cover, 95% auto;
+    background-position: 50% 50%,
+      140% 22%,
+      top -52px right -358px,
+      top 152px right -115px;
+    background-size: cover,
+      95% auto,
+      505px auto,
+      281px auto;
   }
 }
 

@@ -8,8 +8,8 @@
   background-color: var(--basic-white);
   background-image: url("../img/about-background.png");
   background-repeat: no-repeat;
-  background-position: 50% -27px;
-  background-size: contain;
+  background-position: top -30px left 0;
+  background-size: cover;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/about-background@2x.png");
@@ -17,10 +17,17 @@
 
   @media #{$tablet} {
     padding: 54px 25px 83px;
+
+    background-image: url("../img/bg-main-triangle.svg");
+    background-position: top 90px right 0;
+    background-size: 559px auto;
   }
 
   @media #{$mobile} {
     padding: 37px 15px 65px;
+
+    background-position: top 70% right -120px;
+    background-size: 559px auto;
   }
 }
 

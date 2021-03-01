@@ -1,0 +1,46 @@
+// popup-form
+
+.popup-form__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popup-form h2 {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39px;
+  font-family: $font-roboto-condensed;
+}
+
+.popup-form p {
+  margin: 0;
+  margin-right: 10px;
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.popup-form__field {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.popup-form__textarea {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.popup-form__checkbox {
+  order: 1;
+  width: 100%;
+}
+
+.popup-form__button {
+  width: 100%;
+  margin-bottom: 30px;
+}

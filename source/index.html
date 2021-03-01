@@ -30,7 +30,7 @@
     />
 
     <!-- Pixel Glass -->
-    <style>
+    <!-- <style>
       html {
         /* Mobile layout by default */
         background-image: url("img/mobile.jpg");
@@ -54,7 +54,7 @@
 
     </style>
     <link href="./pixel-glass/styles.css" rel="stylesheet" />
-    <script src="./pixel-glass/script.js"></script>
+    <script src="./pixel-glass/script.js"></script> -->
     <!-- // Pixel Glass -->
   </head>
   <body>
@@ -291,6 +291,7 @@
           class="feedback__form feedback-form"
           action="https://echo.htmlacademy.ru"
           method="POST"
+          id="form"
         >
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
@@ -454,6 +455,78 @@
         <a class="bottom__item" href="#">Developed by wow studio </a>
       </div>
     </footer>
+
+    <div class="overlay overlay--close"></div>
+
+    <section class="modal modal--close">
+      <form
+        class="modal__form popup-form"
+        action="https://echo.htmlacademy.ru"
+        method="POST"
+      >
+        <h2>Закажите звонок</h2>
+        <p>
+          Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+        </p>
+        <div class="popup-form__container">
+          <div class="popup-form__field field field--popup">
+            <input
+              type="text"
+              name="popup-name"
+              id="popup-name"
+              placeholder="Имя"
+              required
+            />
+            <label class="visually-hidden" for="popup-name">
+              Введите Ваше Имя
+            </label>
+          </div>
+          <div class="popup-form__field field field--popup">
+            <input
+              type="tel"
+              name="popup-phone"
+              id="popup-phone"
+              pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+              placeholder="Телефон"
+              required
+            />
+            <label class="visually-hidden" for="popup-phone">
+              Введите Ваш номер телефона
+            </label>
+          </div>
+          <div class="popup-form__textarea field field--popup">
+            <textarea
+              name="popup-question"
+              id="popup-question"
+              placeholder="Ваш вопрос"
+              rows="6"
+              required
+            ></textarea>
+            <label class="visually-hidden" for="popup-question">
+              Введите Ваш вопрос
+            </label>
+          </div>
+          <div class="popup-form__checkbox checkbox checkbox--popup">
+            <input
+              type="checkbox"
+              name="popup-checkbox"
+              id="popup-checkbox"
+              checked
+              required
+            />
+            <label for="popup-checkbox"
+              ><span>Я согласен на обработку персональных данных</span></label
+            >
+          </div>
+          <button class="popup-form__button button" type="submit">
+            <span>Отправить</span>
+          </button>
+        </div>
+      </form>
+      <button class="modal__button" type="button">
+        <span class="visually-hidden">Закрыть окно обратной связи</span>
+      </button>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>

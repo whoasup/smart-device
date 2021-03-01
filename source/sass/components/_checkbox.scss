@@ -8,6 +8,10 @@
   @media #{$mobile} {
     padding-left: 0;
   }
+
+  &--popup {
+    padding-left: 0;
+  }
 }
 
 .checkbox input {
@@ -37,6 +41,10 @@
   line-height: 16px;
 
   cursor: pointer;
+}
+
+.checkbox--popup label {
+  margin-left: 34px;
 }
 
 .checkbox span {

@@ -1,0 +1,34 @@
+// button
+
+.button {
+  padding: 14px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $font-roboto-condensed;
+  text-align: center;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  background-color: var(--basic-blue);
+  border: 1px solid var(--basic-white);
+  border-radius: 5px;
+  cursor: pointer;
+
+  appearance: none;
+
+  &:focus,
+  &:hover {
+    color: var(--basic-blue);
+
+    background-color: var(--basic-white);
+    border-color: var(--basic-blue);
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

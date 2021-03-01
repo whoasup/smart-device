@@ -1,0 +1,46 @@
+// field
+
+.field {
+  display: flex;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 14px 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: inherit;
+  color: var(--basic-white);
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+
+  appearance: none;
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    box-shadow: 0 0 0 2px var(--accent-basic);
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--basic-white);
+  }
+}
+
+.field textarea {
+  padding-bottom: 10px;
+
+  resize: none;
+
+  @media #{$mobile} {
+    max-height: 104px;
+  }
+}

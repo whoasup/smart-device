@@ -1,0 +1,44 @@
+// checkbox
+
+.checkbox {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 10px;
+
+  @media #{$mobile} {
+    padding-left: 0;
+  }
+}
+
+.checkbox input {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid var(--basic-white);
+
+  appearance: none;
+
+  &:checked {
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.checkbox label {
+  position: relative;
+
+  display: flex;
+  margin-left: 16px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  cursor: pointer;
+}
+
+.checkbox span {
+  opacity: 0.8;
+}

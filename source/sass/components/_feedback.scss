@@ -1,0 +1,47 @@
+// feedback
+
+.feedback {
+  position: relative;
+
+  padding: 0 Max(135px, calc(50% - 585px));
+  padding-top: 92px;
+  padding-bottom: 113px;
+
+  color: var(--basic-white);
+
+  background-color: var(--basic-blue);
+  background-image: url("../img/bg-triangle-blue.svg"),
+    url("../img/bg-form-plane-triangles.png"),
+    url("../img/bg-big-triangle-blue.svg");
+  background-repeat: no-repeat;
+  background-position: top 45px left 1645px,
+    top -60px right Max(804px, 86%),
+    bottom -17px right 0;
+  background-size: auto 255px, 686px auto, auto 405px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-triangle-blue.svg"),
+      url("../img/bg-form-plane-triangles@2x.png"),
+      url("../img/bg-big-triangle-blue.svg");
+  }
+
+  @media #{$tablet} {
+    padding: 79px 87px 103px 92px;
+
+    background-image: none;
+  }
+
+  @media #{$mobile} {
+    padding: 30px 15px 41px 15px;
+  }
+}
+
+.feedback__form {
+  max-width: 570px;
+  margin-left: auto;
+
+  @media #{$tablet} {
+    max-width: unset;
+    margin: 0 auto;
+  }
+}

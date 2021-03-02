@@ -46,7 +46,7 @@ gulp.task(`js`, function () {
           `./source/js/form.js`,
         ],
         output: {
-          filename: `bundle.js`,
+          filename: `main.js`,
           path: path.resolve(__dirname, `build/js`),
           iife: false,
         },
@@ -144,7 +144,7 @@ gulp.task(`publish`, function (cb) {
 
 gulp.task(
     `build`,
-    gulp.series(`clean`, `copy`, `copypixel`, `css`, `sprite`, `html`, `js`)
+    gulp.series(`clean`, `copy`, `css`, `sprite`, `html`, `js`)
 );
 gulp.task(`start`, gulp.series(`build`, `server`));
 gulp.task(`deploy`, gulp.series(`build`, `publish`));

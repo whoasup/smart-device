@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="en">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,6 +28,7 @@
       type="font/woff2"
       crossorigin
     />
+
   </head>
   <body>
     <header class="header">
@@ -38,25 +39,30 @@
             alt="Smart Device - умные технологии"
             width="52"
             height="52"
+            aria-hidden="true"
           />
-          <p>Smart Device <span>умные технологии</span></p>
+          <img src="./img/logo-header.svg" alt="Smart Device - умные технологии" width="134" height="45">
         </a>
+        <ul class="header__contacts">
+          <li>
+            <a class="header__contact" href="mailto:info@sd.ru">
+            <svg width="19" height="14">
+              <use href="img/sprite_auto.svg#icon-mail"></use>
+            </svg>
+            <span>info@sd.ru</span>
+            </a>
+          </li>
+          <li>
+            <a class="header__contact" href="tel:84950005252">
+              <svg width="18" height="18">
+                <use href="img/sprite_auto.svg#icon-phone"></use>
+              </svg>
+              <span>+7 (495) 000 52 52</span>
+            </a>
+          </li>
+        </ul>
 
-        <a class="header__contact" href="mailto:info@sd.ru">
-          <svg width="19" height="14">
-            <use href="img/sprite_auto.svg#icon-mail"></use>
-          </svg>
-          <span>info@sd.ru</span>
-        </a>
-
-        <a class="header__contact" href="tel:84950005252">
-          <svg width="18" height="18">
-            <use href="img/sprite_auto.svg#icon-phone"></use>
-          </svg>
-          <span>+7 (495) 000 52 52</span>
-        </a>
-
-        <a href="#" class="header__button" data-control="modal"><span>Заказать звонок</span></a>
+        <a href="./form.html" class="header__button" target="_blank" data-control="modal"><span>Заказать звонок</span></a>
       </nav>
 
       <section class="header__intro intro">
@@ -180,7 +186,7 @@
               <a href="#" class="service__link"
                 ><span class="visually-hidden">Производство печатных плат</span>
                 <span class="service__button">
-                  <svg width="4" height="8">
+                  <svg width="6" height="9">
                     <use href="img/sprite_auto.svg#icon-arrow"></use>
                   </svg> </span
               ></a>
@@ -213,7 +219,7 @@
               <a href="#" class="service__link"
                 ><span class="visually-hidden">Монтаж печатных плат</span>
                 <span class="service__button">
-                  <svg width="4" height="8">
+                  <svg width="6" height="9">
                     <use href="img/sprite_auto.svg#icon-arrow"></use>
                   </svg> </span
               ></a>
@@ -249,7 +255,7 @@
                   >Комплектующие для светотехники</span
                 >
                 <span class="service__button">
-                  <svg width="4" height="8">
+                  <svg width="6" height="9">
                     <use href="img/sprite_auto.svg#icon-arrow"></use>
                   </svg> </span
               ></a>
@@ -299,7 +305,6 @@
                 id="feedback-question"
                 placeholder="Ваш вопрос"
                 rows="6"
-                required
               ></textarea>
               <label class="visually-hidden" for="feedback-question">
                 Введите Ваш вопрос
@@ -328,14 +333,14 @@
     <footer class="footer">
       <div class="footer__top footer-top">
         <div class="footer-top__container">
-          <a class="footer-top__logo">
+          <a class="footer-top__logo logo logo--full">
             <img
               src="./img/logo.svg"
               alt="Smart Device - умные технологии"
               width="52"
               height="52"
             />
-            <p>Service Device <span>умные технологии</span></p>
+            <img src="./img/logo-footer.svg" alt="Smart Device - умные технологии" width="148" height="45">
           </a>
           <p class="footer-top__info">1999-2018 SD Service Devices</p>
           <section class="footer-top__socials socials">
@@ -343,7 +348,7 @@
             <ul class="socials__list">
               <li class="socials__item">
                 <a href="#">
-                  <svg width="26" height="26">
+                  <svg width="27" height="27">
                     <use href="img/sprite_auto.svg#icon-fb"></use>
                   </svg>
                   <span class="visually-hidden">Наш Facebook</span>
@@ -351,7 +356,7 @@
               </li>
               <li class="socials__item">
                 <a href="#">
-                  <svg width="26" height="26">
+                  <svg width="27" height="27">
                     <use href="img/sprite_auto.svg#icon-ok"></use>
                   </svg>
                   <span class="visually-hidden">Мы в Одноклассниках</span>
@@ -359,7 +364,7 @@
               </li>
               <li class="socials__item">
                 <a href="#">
-                  <svg width="26" height="26">
+                  <svg width="27" height="27">
                     <use href="img/sprite_auto.svg#icon-vk"></use>
                   </svg>
                   <span class="visually-hidden">Наш Вконтакте</span>
@@ -375,27 +380,37 @@
               <span class="visually-hidden">Открыть/Закрыть секцию</span>
             </button>
             <ul class="sections__list accordion__content">
+
               <li class="sections__item">
-                <a href="#">О компании</a>
+                <ul class="sections__sublist">
+                  <li class="sections__subitem">
+                    <a href="#">О компании</a>
+                  </li>
+                  <li class="sections__subitem">
+                    <a href="#">Продукты</a>
+                  </li>
+                  <li class="sections__subitem">
+                    <a href="#">Производство печатных плат</a>
+                  </li>
+                  <li class="sections__subitem">
+                    <a href="#">Монтаж печатных плат</a>
+                  </li>
+                </ul>
               </li>
               <li class="sections__item">
-                <a href="#">Продукты</a>
+                <ul class="sections__sublist">
+                  <li class="sections__subitem">
+                    <a href="#">Комплектующие</a>
+                  </li>
+                  <li class="sections__subitem">
+                    <a href="#">Доставка</a>
+                  </li>
+                  <li class="sections__subitem">
+                    <a href="#">Контакты</a>
+                  </li>
+                </ul>
               </li>
-              <li class="sections__item">
-                <a href="#">Производство печатных плат</a>
-              </li>
-              <li class="sections__item">
-                <a href="#">Монтаж печатных плат</a>
-              </li>
-              <li class="sections__item">
-                <a href="#">Комплектующие</a>
-              </li>
-              <li class="sections__item">
-                <a href="#">Доставка</a>
-              </li>
-              <li class="sections__item">
-                <a href="#">Контакты</a>
-              </li>
+
             </ul>
           </section>
           <section class="contacts accordion__item">
@@ -472,7 +487,6 @@
               id="popup-question"
               placeholder="Ваш вопрос"
               rows="6"
-              required
             ></textarea>
             <label class="visually-hidden" for="popup-question">
               Введите Ваш вопрос

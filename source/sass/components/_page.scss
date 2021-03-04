@@ -1,4 +1,6 @@
 .page {
+  height: 100%;
+
   font-style: normal;
   font-family: $font-ptmono;
   color: var(--text-grey);
@@ -9,5 +11,12 @@
 .page body {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
   min-width: $small;
+  height: 100%;
+}
+
+.page main {
+  flex-grow: 1;
 }

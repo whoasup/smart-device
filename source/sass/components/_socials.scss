@@ -14,6 +14,8 @@
 }
 
 .socials__item {
+  display: flex;
+  flex-shrink: 0;
   margin-bottom: 15px;
 
   &:hover,
@@ -28,4 +30,8 @@
   &:not(:last-child) {
     margin-right: 15px;
   }
+}
+
+.socials__item a {
+  display: flex;
 }

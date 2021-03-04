@@ -17,10 +17,7 @@
     top 257px left Max(800px, 86%),
     top 120px left Max(700px, 83%),
     top 380px left Max(700px, 66.6%);
-  background-size: cover,
-    705px auto,
-    636px auto,
-    373px auto;
+  background-size: cover, 705px auto, 636px auto, 373px auto;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/main-background@2x.png"),
@@ -36,10 +33,7 @@
       top 117px right -200px,
       top -42px right -200px,
       top 168px right 36px;
-    background-size: cover,
-      59.7% auto,
-      505px auto,
-      294px auto;
+    background-size: cover, 59.7% auto, 505px auto, 294px auto;
   }
 
   @media #{$mobile} {
@@ -49,16 +43,12 @@
       140% 22%,
       top -52px right -358px,
       top 152px right -115px;
-    background-size: cover,
-      95% auto,
-      505px auto,
-      281px auto;
+    background-size: cover, 95% auto, 505px auto, 281px auto;
   }
 }
 
 .header__navigation {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 230px;
@@ -72,14 +62,54 @@
   }
 }
 
+.header__logo {
+  flex-shrink: 0;
+}
+
+.header__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: -10px;
+  padding: 0;
+
+  list-style: none;
+
+  @media #{$tablet} {
+    margin: 0;
+    margin-right: -5px;
+  }
+}
+
+.header__contacts li {
+  display: flex;
+  margin: 0 40px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+
+  @media #{$tablet} {
+    margin: 0;
+    margin-left: 30px;
+
+    transform: scale(1.3);
+  }
+
+  @media #{$mobile} {
+    margin-left: 20px;
+  }
+}
+
 .header__contact {
   display: flex;
   align-items: center;
-  margin: 0 20px;
 
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+
+  @media #{$tablet} {
+    padding: 5px;
+  }
 
   &:hover,
   &:focus {
@@ -89,29 +119,11 @@
   &:active {
     opacity: 0.5;
   }
-
-  @media #{$tablet} {
-    margin: 0;
-    margin-left: 40px;
-
-    transform: scale(1.3);
-  }
-
-  @media #{$mobile} {
-    margin-left: 35px;
-  }
 }
 
 .header__contact svg {
+  flex-shrink: 0;
   margin-right: 16px;
-
-  @media #{$tablet} {
-    margin-right: 0;
-  }
-}
-
-.header__contact:nth-of-type(2n) {
-  margin-right: 70px;
 
   @media #{$tablet} {
     margin-right: 0;
@@ -127,7 +139,7 @@
 .header__button {
   display: block;
   min-width: 180px;
-  margin-left: 30px;
+  margin-left: 10px;
   padding: 15px;
 
   font-weight: 700;

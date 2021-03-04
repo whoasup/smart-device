@@ -2,6 +2,7 @@
 
 .logo {
   display: grid;
+  align-items: center;
   margin-right: auto;
   padding-right: 15px;
 
@@ -9,34 +10,32 @@
   grid-template-columns: auto auto;
 }
 
-.logo img {
+.logo img:first-child {
   @media #{$mobile} {
     width: 38px;
   }
 }
 
-.logo p {
-  display: grid;
-  margin: 0;
-  padding-top: 5px;
-
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 29px;
-  font-family: $font-roboto-condensed;
-  color: var(--basic-white);
-  text-transform: capitalize;
-
+.logo img:last-child {
   @media #{$mobile} {
     display: none;
   }
 }
 
-.logo span {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  font-family: $font-roboto;
-  color: var(--logo-grey);
-  text-transform: none;
+.logo--full {
+  @media #{$mobile} {
+    padding-right: 0;
+  }
+}
+
+.logo--full img:first-child {
+  @media #{$mobile} {
+    width: unset;
+  }
+}
+
+.logo--full img:last-child {
+  @media #{$mobile} {
+    display: unset;
+  }
 }

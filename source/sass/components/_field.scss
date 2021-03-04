@@ -17,15 +17,12 @@
 
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
+  border-radius: 0;
 
   appearance: none;
 
   &::placeholder {
     color: inherit;
-  }
-
-  &:invalid:not(:placeholder-shown) {
-    box-shadow: 0 0 0 2px var(--accent-basic);
   }
 
   &:focus,

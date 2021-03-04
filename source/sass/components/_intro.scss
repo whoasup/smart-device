@@ -118,8 +118,9 @@
   }
 
   @media #{$mobile} {
-    max-width: unset;
-    margin-left: 0;
+    min-width: 287px;
+    max-width: 379px;
+    margin: 0 auto;
   }
 }
 

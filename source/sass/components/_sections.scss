@@ -1,10 +1,11 @@
 // sections
 
 .sections {
-  width: 60%;
+  flex-grow: 1;
+  max-width: 495px;
 
   @media #{$tablet} {
-    width: unset;
+    max-width: unset;
     margin-right: 10px;
   }
 
@@ -31,14 +32,16 @@
 }
 
 .sections__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 
   list-style: none;
-  column-count: 2;
 
   @media #{$tablet} {
-    column-count: unset;
+    flex-direction: column;
   }
 
   @media #{$mobile} {
@@ -47,14 +50,28 @@
 }
 
 .sections__item {
-  margin-right: 9.2%;
+  flex-grow: 1;
+}
+
+.sections__sublist {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.sections__subitem {
+  // min-width: 243px;
 
   @media #{$tablet} {
     margin-right: 0;
   }
 }
 
-.sections__item a {
+.sections__subitem a {
   font-weight: normal;
   font-size: 15px;
   line-height: 25px;

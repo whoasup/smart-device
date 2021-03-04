@@ -11,24 +11,42 @@
 
   background-color: var(--basic-blue);
   background-image: url("../img/bg-triangle-blue.svg"),
-    url("../img/bg-form-plane-triangles.png"),
     url("../img/bg-big-triangle-blue.svg");
   background-repeat: no-repeat;
-  background-position: top 45px left 1645px,
-    top -60px right Max(804px, 86%),
-    bottom -17px right 0;
-  background-size: auto 255px, 686px auto, auto 405px;
+  background-position: top 45px left 1645px, bottom -17px right 0;
+  background-size: auto 255px, auto 405px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: Max(720px, 54%);
+    bottom: 30px;
+    left: 0;
+
+    background-image: url("../img/bg-form-plane-triangles.png");
+    background-repeat: no-repeat;
+    background-position: 90% calc(50% - 60px);
+    background-size: contain;
+  }
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/bg-triangle-blue.svg"),
-      url("../img/bg-form-plane-triangles@2x.png"),
       url("../img/bg-big-triangle-blue.svg");
+
+    &::before {
+      background-image: url("../img/bg-form-plane-triangles@2x.png");
+    }
   }
 
   @media #{$tablet} {
     padding: 79px 87px 103px 92px;
 
     background-image: none;
+
+    &::before {
+      display: none;
+    }
   }
 
   @media #{$mobile} {

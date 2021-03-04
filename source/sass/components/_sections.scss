@@ -61,13 +61,19 @@
   padding: 0;
 
   list-style: none;
+
+  @media #{$mobile} {
+    align-self: start;
+  }
 }
 
 .sections__subitem {
-  // min-width: 243px;
-
   @media #{$tablet} {
     margin-right: 0;
+  }
+
+  @media #{$mobile} {
+    align-self: start;
   }
 }
 
@@ -85,5 +91,10 @@
 
   &:active {
     opacity: 0.7;
+  }
+
+  @media #{$mobile} {
+    position: relative;
+    z-index: 2;
   }
 }

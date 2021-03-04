@@ -43,6 +43,8 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
+
+  background-color: #ffffff;
 }
 
 .contacts__item a,
@@ -50,6 +52,11 @@
   margin: 0;
 
   opacity: 0.5;
+
+  @media #{$mobile} {
+    position: relative;
+    z-index: 2;
+  }
 }
 
 .contacts__item a {
